@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container center">
+    <form action="{{ url_for('search') }}" id="search-selection-form" method="post">
+        <p>PLEASE SELECT DESIRED SEARCH TYPE</p>
+        <div>
+            <input class="button left-side-btn" type="submit" name="btn" value="Single">
+            <input class="button right-side-btn" type="submit" name="btn" value="Bulk">
+        </div>
+    </form>
+</div>
+{% endblock %}

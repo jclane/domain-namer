@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container center">
+
+  {% block search_form %}{% endblock %}
+
+  {% if results %}
+  <table id="results">
+    <thead>
+        <tr><th colspan="2">RESULTS</th></tr>
+        <tr>
+            <th>Domain Name</th>
+            <th>Availability</th>
+        </tr>
+    </thead>
+    <tbody>
+      {% for result in results %}
+        <tr class="result">
+          <td>{{ result }}</td>
+          <td>available</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  {% endif %}
+</div>
+
+{% endblock %}

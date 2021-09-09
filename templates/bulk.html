@@ -1,0 +1,13 @@
+{% extends "search_base.html" %}
+
+{% block search_form %}
+<form action="{{ url_for('bulk') }}" id="search-form" enctype="multipart/form-data" method="post">
+    <label class="button left-side-btn"><span id="file-chosen">SELECT A TEXT FILE</span>
+      <input id="file-upload" name="text-file" type="file" />
+    </label>
+  <input type="text" class="form-input" id="tld" name="tld" placeholder="Enter a TLD">
+  <input type="submit" class="button right-side-btn" name="submit" id="submit" value="Search">
+</form>
+
+<script type="text/javascript" src="./js/javascript.js"></script>
+{% endblock %}
